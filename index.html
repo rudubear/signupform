@@ -22,37 +22,41 @@
     </div>
     <div class="rightdiv">
         <div class="callToAction">
-            <p>Come enjoy the great out doors with your travel guide, Solaire of Astora. <br><br> Together we can honour the sun for it's glorius gifts upon us.</p>
+            <p>Come join our adventures in the greatout doors with your travel guide, Solaire of Astora. <br><br> Together we can honour the sun for it's glorius gifts upon us.</p>
         </div>
-        <form id="myform" method="post" action="something">
+        <form id="myform" method="post">
             <div class="formItem">
                 <label for="first_name">FIRST NAME</label>
-                <input type="text" id="firstName" name="first_name" required minlength="1" maxlength="20">
+                <input type="text" id="firstName" name="first_name" required minlength="1" maxlength="20" placeholder="firstname">
             </div>
             <div class="formItem">
                 <label for="last_name">LAST NAME</label>
-                <input type="text" id="lastName" name="last_name" required minlength="1" maxlength="20">
+                <input type="text" id="lastName" name="last_name" required minlength="1" maxlength="20" placeholder="lastname">
             </div>
             <div class="formItem">
                 <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" placeholder="email@xyz.com">
             </div>
             <div class="formItem">
                 <label for="phone_number">PHONE NUMBER</label>
-                <input type="text" id="phoneNumber" name="phone_number" required pattern="([0-9]{10})|([0-9]{3}[ \-.][0-9]{3}[ \-.][0-9]{4})">
+                <input type="text" id="phoneNumber" name="phone_number" required pattern="([0-9]{10})|([0-9]{3}[ \-.][0-9]{3}[ \-.][0-9]{4})" placeholder="123-456-7890">
             </div>
-            <div class="formItem">
+            <div class="formItem passwords">
                 <label for="password1">PASSWORD</label>
-                <input type="password" id="password1" name="password1">
+                <input type="password" id="password1" name="password1" placeholder="password" required minlength="6">
             </div>
-            <div class="formItem">
+            <div class="formItem passwords">
                 <label for="password2">CONFIRM PASSWORD</label>
-                <input type="password" id="password2" name="password2">
+                <input type="password" id="password2" name="password2" placeholder="password" required minlength="6">
+                <p id="passwordmsg"></p>
             </div>
         </form>
         <div class="action">
-            <button id="btnSubmit" form="myform" type="submit">Register</button>
+            <button id="btnSubmit" form="myform" type="submit">REGISTER</button>
         </div>
     </div>
+    <footer>
+        <script src="js/javascript.js"></script>
+    </footer>
 </body>
 </html>

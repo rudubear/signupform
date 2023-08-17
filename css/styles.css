@@ -1,13 +1,17 @@
 :root {
     --background: #271200;
-    --logoContainerBackground: #6b400388;
-    --logoText: #FFD700;
+    --logoContainerBackground: #b34a00AA; /* #6b400388;*/
+    --logoText: #fccd8c;
+    --logoTextShadow: #FF9F50;
     --credits: #FFFFFF;
-    --rightDivBG: #FFD9A5;
+    --rightDivBG: #fccd8c;
+    --formBG: #FFD9A5;
     --formBorder: #FFCB62;
     --formShadow: #FF8000;
     --callToAction: #b34a00;
     --callToActionShadow: #FF9F50;
+    --inputBorderColor: #b34a0088;
+    --inputBorderColorFocus: #b34a00FF;
     --callToActionText: 'Roboto Slab';
 }
 
@@ -51,7 +55,7 @@ body {
 
 .logotext {
     font-family: var(--callToActionText);
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 1px 2px var(--logoTextShadow);
     color: var(--logoText);
     display: inline;
     font-size: 2rem;
@@ -76,7 +80,7 @@ body {
     background-color: var(--rightDivBG);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     width: calc(max(720px,40%));
     height: 100vh;
 }
@@ -87,19 +91,60 @@ body {
     justify-content: center;
     align-items: center;
     margin: 32px 0px;
+    background-color: var(--formBG);
     border-top: solid 1px var(--formBorder);
-    border-left: solid 1px var(--formBorder);
+    border-left: none;
     border-right: none;
     border-bottom: solid 1px var(--formBorder);
-    box-shadow: 0px 1px 4px var(--formShadow);
+    box-shadow: 1px 1px 3px var(--formShadow);
 }
 
 .formItem{
     display: flex;
     flex-direction: column;
     padding: 16px;
+    height: 72px;
     width: 50%;
+    color: var(--callToAction);
+    font-family: 'Roboto Slab', sans-serif;
 }
+
+.formItem.passwords{
+    height: 96px;
+}
+
+input, input:blank {
+    border: 1px solid var(--inputBorderColor);
+    box-shadow: none;
+    color: var(--callToAction);
+    padding: 2px;
+}
+
+
+input:focus {
+    border: 1px solid blue;
+    /*border: 1px solid var(--inputBorderColorFocus);*/
+    box-shadow: 1px 1px 2px var(--background);
+    outline: none;
+    padding: 2px;
+}
+
+
+.inputIsValid {
+    border: 1px solid green;
+}
+
+.inputIsInvalid {
+    border: 1px solid red;
+}
+
+/*
+input:invalid {
+    border: 1px solid var(--inputBorderColorFocus);
+    box-shadow: 1px 1px 2px var(--background);
+}
+*/
+
 
 .callToAction{
     font-size: 24px;
@@ -110,4 +155,20 @@ body {
     margin-right: 2rem; 
     margin-top: 6rem; 
     margin-bottom: 2rem;
+}
+
+.action{
+    margin: 20px auto auto;
+}
+
+#btnSubmit{
+    margin: auto auto;
+    width: 200px;
+    height: 48px;
+    border-radius: 6px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    background-color: var(--callToAction);
+    color: var(--rightDivBG);
+    box-shadow: 2px 2px 4px var(--background);
 }
