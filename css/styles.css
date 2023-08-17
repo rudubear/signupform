@@ -1,3 +1,113 @@
+:root {
+    --background: #271200;
+    --logoContainerBackground: #6b400388;
+    --logoText: #FFD700;
+    --credits: #FFFFFF;
+    --rightDivBG: #FFD9A5;
+    --formBorder: #FFCB62;
+    --formShadow: #FF8000;
+    --callToAction: #b34a00;
+    --callToActionShadow: #FF9F50;
+    --callToActionText: 'Roboto Slab';
+}
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.leftdiv {
+    width: calc(max(480px,30%));
+    max-width: 600px;
+    background-image: url(../img/jens-r-lmDM5clQGqQ-unsplash.webp);
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logoContainer{
+    background-color: var(--logoContainerBackground);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+.logotext {
+    font-family: var(--callToActionText);
+    text-shadow: 2px 2px black;
+    color: var(--logoText);
+    display: inline;
+    font-size: 2rem;
+}
+
+.logo {
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0.8;
+    height: 120px;
+    vertical-align:middle;
+}
+
+.credits, .credits a {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--credits);
+    font-size: 1rem;
+    text-decoration: none;
+    height: 64px;
+}
+
+.rightdiv{
+    background-color: var(--rightDivBG);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(max(720px,40%));
+    height: 100vh;
+}
+
+#myform{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0px;
+    border-top: solid 1px var(--formBorder);
+    border-left: solid 1px var(--formBorder);
+    border-right: none;
+    border-bottom: solid 1px var(--formBorder);
+    box-shadow: 0px 1px 4px var(--formShadow);
+}
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 50%;
+}
+
+.callToAction{
+    font-size: 24px;
+    font-family: 'Roboto Slab', serif;
+    color: var(--callToAction);
+    text-shadow: 1px 1px 2px var(--callToActionShadow) ;
+    margin-left: 2rem; 
+    margin-right: 2rem; 
+    margin-top: 6rem; 
+    margin-bottom: 2rem;
 }

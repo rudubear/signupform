@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
 </head>
 <body>
-    <h1>Sign Up Form</h1>
+    <div class="leftdiv">
+        
+        <div class="logoContainer">
+            <img class="logo" src="img/solaire.png">
+            <p class="logotext">Praise the Sun!</p>
+        </div>
+        <div class="credits">
+            Photo by <a href="https://unsplash.com/@infernisvox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jens R.</a> on <a href="https://unsplash.com/photos/a-view-of-a-mountain-range-with-mountains-in-the-background-lmDM5clQGqQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            <br>
+            <a href="https://www.flaticon.com/free-icons/bear" title="bear icons">Bear icons created by Freepik - Flaticon</a>
+        </div>
+        
+    </div>
+    <div class="rightdiv">
+        <div class="callToAction">
+            <p>Come enjoy the great out doors with your travel guide, Solaire of Astora. <br><br> Together we can honour the sun for it's glorius gifts upon us.</p>
+        </div>
+        <form id="myform" method="post" action="something">
+            <div class="formItem">
+                <label for="first_name">FIRST NAME</label>
+                <input type="text" id="firstName" name="first_name" required minlength="1" maxlength="20">
+            </div>
+            <div class="formItem">
+                <label for="last_name">LAST NAME</label>
+                <input type="text" id="lastName" name="last_name" required minlength="1" maxlength="20">
+            </div>
+            <div class="formItem">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="formItem">
+                <label for="phone_number">PHONE NUMBER</label>
+                <input type="text" id="phoneNumber" name="phone_number" required pattern="([0-9]{10})|([0-9]{3}[ \-.][0-9]{3}[ \-.][0-9]{4})">
+            </div>
+            <div class="formItem">
+                <label for="password1">PASSWORD</label>
+                <input type="password" id="password1" name="password1">
+            </div>
+            <div class="formItem">
+                <label for="password2">CONFIRM PASSWORD</label>
+                <input type="password" id="password2" name="password2">
+            </div>
+        </form>
+        <div class="action">
+            <button id="btnSubmit" form="myform" type="submit">Register</button>
+        </div>
+    </div>
 </body>
 </html>
